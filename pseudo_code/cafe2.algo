@@ -1,0 +1,13 @@
+DEBUG ALGO ajouterDeux
+
+VARIABLES
+valeurRetour: entier
+
+PARAMETRE
+nombre: entier
+
+DEBUT
+
+valeurRetour <- nombre +2
+FIN
+

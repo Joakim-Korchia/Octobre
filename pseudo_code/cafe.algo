@@ -1,0 +1,23 @@
+DEBUT ALGO
+VARIABLES
+
+age: entier
+entreeUtilisateur
+valeurAfficher
+
+CONSTANTES
+nomPetitRobot:chaine de caracteres
+
+FONCTIONS
+ajouterDeux: foction: entier
+
+DEBUT
+entreeUtilisateur <- LIRE
+valeurAfficher <- ajouterDeux(entreeUtilisateur)
+AFFICHER valeurAfficher
+
+
+
+
+
+FIN
