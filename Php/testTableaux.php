@@ -14,6 +14,11 @@ for ($lines = 0; $lines <= 1; $lines++) {
 }
 ?>
 
+
+
+
+
+
 //BOUCLE foreach
 <?php
 
@@ -26,8 +31,16 @@ $recipes = [
 foreach ($recipes as $recipe) {
     echo $recipe[0]; // Affichera Cassoulet, puis Couscous
 }
-
 ?>
+
+
+
+
+
+
+
+
+
 
 <?php
 $recipe = [
@@ -46,6 +59,14 @@ foreach ($recipe as $value) {
  * CassouletEtape 1 : des flageolets, Etape 2 : ...mickael.andrieu@exemple.com1
  */
 ?>
+
+
+
+
+
+
+
+
 
 
 <?php
@@ -82,6 +103,11 @@ foreach($recipes as $recipe) {
 }
 ?>
 
+
+
+
+
+
 <?php
 
 $recipes = [
@@ -104,6 +130,10 @@ print_r($recipes);
 echo '</pre>';
 ?>
 
+
+
+
+
 <?php
 $recipe = [
     'title' => 'Salade Romaine',
@@ -120,4 +150,22 @@ if (array_key_exists('commentaires', $recipe))
 {
     echo 'La clé "commentaires" se trouve dans la recette !';
 }
+?>
+
+
+
+
+
+<?php
+$users = [
+    'Mathieu Nebra',
+    'Mickaël Andrieu',
+    'Laurène Castor',
+];
+
+$positionMathieu = array_search('Mathieu Nebra', $users);
+echo '"Mathieu" se trouve en position ' . $positionMathieu . PHP_EOL;
+
+$positionLaurène = array_search('Laurène Castor', $users);
+echo '"Laurène" se trouve en position ' . $positionLaurène . PHP_EOL;
 ?>
