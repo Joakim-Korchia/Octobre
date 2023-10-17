@@ -1,7 +1,7 @@
 <?php
 $cashFloatFile = 'cashFloat.txt';
 
-$billet500 = 2 * 500;
+$billet500 = 1 * 500;
 $billet200 = 1 * 200;
 $billet100 = 0 * 100;
 $billet50 = 2 * 50;
