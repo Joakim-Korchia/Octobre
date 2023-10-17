@@ -4,7 +4,7 @@ $centsTotal = (500 * 100) + (200 * 100) + (100 * 0) + (50 * 2 * 100) + (20 * 3 *
     + (0.1 * 15 * 100) + (0.05 * 23 * 100) + (0.02 * 14 * 100) + (0.01 * 30 * 100);
 
 //floor pour arrondir à l'entier inférieur
-$euros = round($centsTotal / 100);
+$euros = floor($centsTotal / 100);
 $cents =  ($centsTotal % 100);
 
 echo "Le fonds de caisse initial est de : " . $euros . " € et " . $cents . " centimes.";
