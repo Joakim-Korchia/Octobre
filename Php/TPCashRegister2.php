@@ -13,10 +13,15 @@ echo "Le fonds de caisse initial est de : " . $euros . " € et " . $cents . " c
 <?php
 //Dans le cas où le client paie 100.20 € un produit qui coûte 60.18 €
 $amountGiven = 100 * 100 + 20; //montant donné par le client converti en centimes
+$detailedGiven = array (
+    10000 => 1,
+    20 => 1
+);
 $amountToPay = 60 * 100 + 18; //montant à payer converti en centimes
 $moneyReturned = $amountGiven - $amountToPay; //montant à rendre
 $moneyAvailable = array(50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1); //Valeur des billets et pièces du fonds de caisse converti en centimes
 $toReturn = array(); //tableau pour stocker les billets et pièces que l'on va rendre
+
 
 //Calcul avec foreach pour passer en revue chaque ligne du tableau + stockage dans une variable temporaire
 foreach ($moneyAvailable as $billValue) {
