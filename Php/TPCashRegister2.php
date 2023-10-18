@@ -20,14 +20,23 @@ $toReturn = array(); //tableau pour stocker les billets et pièces que l'on va r
 
 //Calcul avec foreach pour passer en revue chaque ligne du tableau + stockage dans une variable temporaire
 foreach ($moneyAvailable as $billValue) {
-    while ($moneyReturned >= $billValue) {
-        $moneyReturned -= $billValue;
-        array_push($toReturn, $billValue);
+    $quantity = floor($moneyReturned / $billValue);
+    if ($quantity > 0) {
+        $toReturn[$billValue] = $quantity;
+        $moneyReturned -= $billValue * $quantity;
     }
 }
+echo "Le client doit : ". ($amountToPay/100)." euros" ;
+echo " et il paie " . ($amountGiven/100). " euros" .PHP_EOL;
+echo "La monnaie rendu sera :" . PHP_EOL;
+foreach ($toReturn as $billValue => $quantity) {
+    if ($billValue >= 100) {
+        echo $quantity . " billet(s) de " . ($billValue / 100) . " € ;" . PHP_EOL;
+    } else {
+        echo $quantity . " pièce(s) de " . $billValue . " cents. " .PHP_EOL;
+        echo "Pour un total donc de ". (($amountGiven - $amountToPay)/100). " euros !" ;
+    }
 
-echo "La monnaie rendu sera : ";
-foreach ($toReturn as $billValue) {
-    echo ($billValue / 100) . " euros ";
 }
+ 
 ?>
