@@ -42,11 +42,3 @@ FROM prestation
 GROUP BY ID_PRESTATAIRE
 ORDER BY gainTotal DESC
 LIMIT 5;  
-
-
-/* connaître les 5 prestataires qui ont effectué le plus de prestations */
-SELECT ID_PRESTATAIRE, COUNT(*)AS nombrePrestations
-FROM prestation
-GROUP BY ID_PRESTATAIRE
-ORDER BY nombrePrestations DESC
-LIMIT 5;
