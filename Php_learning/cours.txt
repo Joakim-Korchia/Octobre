@@ -1,0 +1,35 @@
+--> Les structures de langage !
+
+Une structure de langage correspond simplement à une partie de la syntaxe d’un langage.
+La syntaxe d’un langage informatique correspond à un ensemble de mots clefs au sens bien défini par le langage.
+A partir de cette syntaxe, et en combinant les mots clefs, nous allons pouvoir construire des expressions.
+
+Echo et print sont des structures de langage
+Toujours finir par un point virgule.
+
+--> Le caractère d'échappement
+L'antislash \
+
+echo 'Je m\'appelle Florian mais tout le monde m\'appelle "Flo"';
+echo "Je m'appelle Florian mais tout le monde m'appelle \"Flo\"";
+
+sont les 2 façon d'utiliser les antislash et des guillemets différents
+
+--> Une variable ?
+Une variable est un conteneur servant à stocker des informations de manière temporaire,
+comme une chaine de caractères (un texte) ou un nombre par exemple.
+
+= --> attribution d'une valeur
+= = --> égalité en termes de valeurs simples
+= = = --> égalité en termes de valeurs et de type de données, i-e l'identité
+
+            $age = 28; //Stocke le nombre 28
+            $age2 = "28"; //Stocke la chaine de caractères "28"
+            
+            echo "La variable \$age contient une valeur de type ";
+            echo gettype($age);
+            
+            echo "<br>La variable \$age2 contient une valeur de type ";
+            echo gettype($age2);
+
+On utilise gettype() pour obtenir le type de données de la valeur stockée dans la variable
